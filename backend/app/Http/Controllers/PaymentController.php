@@ -19,7 +19,6 @@ class PaymentController extends Controller
             'amount' => 4000,
             'currency' => 'jpy',
         ]);
-        dd($paymentIntent);
         $output = [
             'clientSecret' => $paymentIntent->client_secret,
         ];
