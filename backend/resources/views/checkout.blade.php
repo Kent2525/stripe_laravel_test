@@ -9,7 +9,7 @@
     <link href="{{ asset('css/stripe.css') }}" rel="stylesheet" type="text/css">
     <script src="https://js.stripe.com/v3/"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
-    <link href="{{ asset('js/stripe.js') }}" rel="stylesheet" type="text/js">
+    <script src="{{ asset('js/stripe.js', true) }}"></script>
     <script>
       var price = 200;
       var reserveId = 1;

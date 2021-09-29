@@ -11,7 +11,7 @@ class PaymentController extends Controller
 {
     \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
     header('Content-Type: application/json');
-
+    //JSONでPOSTされた値の取り出し
     $params = json_decode(file_get_contents('php://input'), true);
 
     try {
