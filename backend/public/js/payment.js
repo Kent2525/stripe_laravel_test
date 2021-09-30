@@ -1,7 +1,7 @@
 /* public/js/payment.js　*/
 
 /* 基本設定*/
-const stripe = Stripe("ここにStripeから発行された公開可能キーを入力");
+const stripe = Stripe("{{ env('STRIPE_KEY') }}");
 const elements = stripe.elements();
 
 /* Stripe Elementsを使ったFormの各パーツをどんなデザインにしたいかを定義 */
