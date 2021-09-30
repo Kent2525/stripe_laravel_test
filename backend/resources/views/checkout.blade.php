@@ -5,6 +5,7 @@
     <title>Accept a card payment</title>
     <meta name="description" content="A demo of a card payment on Stripe" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link href="{{ asset('css/stripe.css') }}" rel="stylesheet" type="text/css">
     <script src="https://js.stripe.com/v3/"></script>

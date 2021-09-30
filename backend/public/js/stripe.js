@@ -1,6 +1,3 @@
-// A reference to Stripe.js initialized with your real test publishable API key.
-var stripe = Stripe("{{ env('STRIPE_KEY') }}");
-
 // The items the customer wants to buy
 var purchase = {
   items: [{ id: "xl-tshirt" }]
@@ -12,7 +9,8 @@ window.onload = function() {
   };
 
   document.querySelector("button").disabled = true;
-  fetch("https://9127-113-42-65-114.ngrok.io/payment", {
+  // ngrok起動ごとにURLを変える。
+  fetch("https://34d5-113-42-65-114.ngrok.io/payment", {
     method: "POST",
     headers: {
       'X-CSRF-TOKEN': document.getElementsByName('csrf-token')[0].content,

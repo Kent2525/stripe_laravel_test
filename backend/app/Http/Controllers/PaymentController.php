@@ -13,7 +13,6 @@ class PaymentController extends Controller
     header('Content-Type: application/json');
     //JSONでPOSTされた値の取り出し
     $params = json_decode(file_get_contents('php://input'), true);
-
     try {
         $paymentIntent = \Stripe\PaymentIntent::create([
             'amount' => 4000,

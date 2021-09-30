@@ -16,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('checkout');
 });
-
+// laravel8から呼び出し方変更
 Route::post ('/payment', 'App\Http\Controllers\PaymentController@payment');
