@@ -12,8 +12,8 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="{{ asset('js/stripe.js', true) }}"></script>
     <script>
-      var price = 200;
-      var reserveId = 1;
+      var price = {{ $reserve->price }};
+      var reserveId = {{ $reserve->id }};
       var stripe = Stripe("{{ env('STRIPE_KEY') }}");
     </script>
   </head>

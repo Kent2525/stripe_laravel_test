@@ -15,7 +15,7 @@ class PaymentController extends Controller
     $params = json_decode(file_get_contents('php://input'), true);
     try {
         $paymentIntent = \Stripe\PaymentIntent::create([
-            'amount' => 4000,
+            'amount' => $params['price'],
             'currency' => 'jpy',
         ]);
         $output = [
