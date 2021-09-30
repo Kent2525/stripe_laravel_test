@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/user/payment', 'User\PaymentController@getCurrentPayment')->name('user.payment');
+Route::get('/user/payment/form', 'User\PaymentController@getPaymentForm')->name('user.payment.form');
+Route::post('/user/payment/store', 'User\PaymentController@storePaymentInfo')->name('user.payment.store');
