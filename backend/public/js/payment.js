@@ -8,7 +8,7 @@ const elements = stripe.elements();
 const style = {
     base: {
         fontSize: '12px',
-        color: "#32325d",
+        color: "#32325d",   
         border: "solid 1px ccc"
     }
 };
